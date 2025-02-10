@@ -24,7 +24,24 @@
                         <input type="submit" value="Input Data Buku" class="btn btn-primary" name="btnInputBukuGambar">
                     </div>
 
+                    <table class="table">
+                      <tr>
+                        <td>#</td>
+                        <td>nama</td>
+                        <td colspan=2>Menu</td>
+                      </tr>
+                      @forelse( $kat as $k )
+                      <tr>
+                        <td>{{$k->id}}</td>
+                        <td>{{$k->nama}}</td>
+                        <td>edit</td>
+                        <td>delete</td>
+                      </tr>
 
+                      @empty
+                      data kosong.
+                      @endforelse
+                    </table>
                 </form>
             </div>
         </div>
