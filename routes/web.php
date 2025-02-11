@@ -18,3 +18,5 @@ Route::get('/ADM/inputpenulis', function () {
 });
 
 Route::get('/ADM/inputkategori', [kategoriController::class,'index'])->name('ADM.inputkategori');
+
+Route::post('/ADM/inputkategori', [kategoriController::class,'store']) ->name('adm.storekategori');
